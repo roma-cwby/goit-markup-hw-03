@@ -4,6 +4,9 @@
     --accent-color: #2196F3;
     --white-color: #FFFFFF;
     --main-title-color: #FFFFFF;
+
+    --item: 3;
+    --space: 30px
 }
 
 p, h1, h2, h3, h4, h5, h6{
@@ -24,6 +27,7 @@ img{
 
 body{
     font-family: 'Roboto', sans-serif;
+    
     color: var(--main-color);
     background-color: var(--white-color);
 }
@@ -45,13 +49,15 @@ body{
 }
 
 .visually-hidden {
+    padding: 0;
+
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
-    padding: 0;
+    border: 0; 
     white-space: nowrap;
+
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -76,6 +82,7 @@ body{
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+
     color: var(--accent-color);
 }
 .header-logo{
@@ -83,12 +90,14 @@ body{
 }
 
 .header-nav-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+
     color: var(--main-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .header-nav-item:hover,
@@ -125,12 +134,15 @@ body{
 }
 
 .header-contact{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+
     color: var(--second-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -156,20 +168,25 @@ body{
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    
     color: var(--white-color);
 }
 
 .address{
+    margin-top: 20px;
+
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+
     color: var(--white-color);
-    margin-top: 20px;
+    
 }
 
 .footer-contact{
     font-size: 14px;
     line-height: 1.71;
+
     color: rgba(255, 255, 255, 0.6);
 }
 .footer-contact:hover,
@@ -196,23 +213,30 @@ body{
 }
 
 .hero-title{
+    margin: 0 auto;
+    margin-bottom: 30px;
+
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.36;   
+    line-height: 1.36;
+
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-title-color);
     max-width: 696px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    
 }
 
 .hero-button{
+    display: block;
+        margin: 0 auto;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    letter-spacing: 0.06em;   
+    letter-spacing: 0.06em;
+
     color: var(--white-color);
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -221,8 +245,7 @@ body{
     border: none;
     min-width: 200px;
     min-height: 50px;
-    display: block;
-    margin: 0 auto;
+    
 }
 
 .hero-button:hover,
@@ -234,32 +257,39 @@ body{
 /* ----------Benefits----------- */
 
 .benefits{
-    padding-bottom: 0;
+    padding-bottom: 47px;
 }
 
 .behefits-list{
     display: flex;
+    margin: calc(-1 * var(--space) / 2);
 }
 
-.benefits-item:not(:last-child){
-    margin-right: 30px;
+.benefits-item{
+    --item: 4;
+    flex-basis: calc(100% / var(--item) - var(--space));
+    margin: calc(var(--space) / 2);
 }
 
 
 .benefits-item-title{
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
     color: var(--main-color);
-    margin-bottom: 10px;
+    
 }
 
 .benefits-text{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
     color: var(--second-color);
     width: 270px;
 }
@@ -267,24 +297,31 @@ body{
 
 /* ----------Work----------- */
 
+.work{
+    padding-top: 47px;
+}
+
 .work-list{
     display: flex;
-    margin-left: -30px;
+    margin: calc(-1 * var(--space) / 2);
 }
 
 .work-item{
-    flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
+    flex-basis: calc(100% / var(--item) - var(--space));
+    margin: calc(var(--space) / 2);
 }
 
 .work-title{
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+
     color: var(--main-color);
-    margin-bottom: 50px;
+    
 }
 
 /* ----------Team----------- */
@@ -295,41 +332,50 @@ body{
 
 .team-list{
     display: flex;
-    margin-left: -30px;
+    margin: calc(-1 * var(--space) / 2);
 }
 
 .team-item{
-    flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
+    --item: 4;
+    flex-basis: calc(100% / var(--item) - var(--space));
+    margin: calc(var(--space) / 2);
+
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
 .team-main-title{
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+
     color: var(--main-color);
-    margin-bottom: 50px;
+    
 }
 
 
 .team-title{
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+
     color: var(--main-color);
-    margin-bottom: 10px;
+    
 }
 
 .team-text{
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+
     color: var(--second-color);
 }
 
@@ -337,6 +383,8 @@ body{
     padding-top: 30px;
     text-align: center;
     padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* ----------Portfolio----------- */
@@ -353,15 +401,18 @@ body{
 }
 
 .portfolio-button{
+    padding: 6px 22px 6px 22px;
+
     background-color: #F5F4FA;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
+
     color: var(--main-color);
     border: none;
-    padding: 6px 22px 6px 22px;
+    
 }
 
 .portfolio-button-item:not(:last-child) {
@@ -383,6 +434,7 @@ body{
 
 .portfolio-info{
     padding: 20px 24px;
+
     border-bottom: 1px solid #ECECEC;
     border-left: 1px solid #ECECEC;
     border-right: 1px solid #ECECEC;
@@ -391,12 +443,12 @@ body{
 .portfolio-list{
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    margin: calc(-1 * var(--space) / 2);
 }
 
 .portfolio-item{
-    flex-basis: calc(100% / 3 - 30px);
-    margin: 15px;
+    flex-basis: calc(100% / var(--item) - var(--space));
+    margin: calc(var(--space) / 2);
 }
 
 .portfolio-title{
@@ -404,6 +456,7 @@ body{
     font-size: 18px;
     line-height: 2.0;
     letter-spacing: 0.06em;
+
     color: var(--main-color);
 }
 
@@ -411,5 +464,6 @@ body{
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+
     color: var(--second-color);
 }
